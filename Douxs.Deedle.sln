@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9FDD43F4-FAD1-4CF7-B747-66ADB319361B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Douxs.Deedle", "src\Douxs.Deedle\Douxs.Deedle.csproj", "{E4549A83-DDDD-418C-B354-08E1BC3875E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0315DFCC-1385-4C52-A919-CA3C5D251C69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Douxs.Deedle.Tests", "tests\Douxs.Deedle.Tests\Douxs.Deedle.Tests.csproj", "{69D5E50E-A97B-4E8C-838E-D4046BFFB3BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E4549A83-DDDD-418C-B354-08E1BC3875E5} = {9FDD43F4-FAD1-4CF7-B747-66ADB319361B}
+		{69D5E50E-A97B-4E8C-838E-D4046BFFB3BD} = {0315DFCC-1385-4C52-A919-CA3C5D251C69}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4549A83-DDDD-418C-B354-08E1BC3875E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4549A83-DDDD-418C-B354-08E1BC3875E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4549A83-DDDD-418C-B354-08E1BC3875E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4549A83-DDDD-418C-B354-08E1BC3875E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69D5E50E-A97B-4E8C-838E-D4046BFFB3BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69D5E50E-A97B-4E8C-838E-D4046BFFB3BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69D5E50E-A97B-4E8C-838E-D4046BFFB3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69D5E50E-A97B-4E8C-838E-D4046BFFB3BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
