@@ -51,6 +51,7 @@ jobs:
     
     - name: Build
       env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
         ./sonar/scanner/dotnet-sonarscanner begin /k:"kelely_douxiaoshen-deedle" /o:"kelely" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
