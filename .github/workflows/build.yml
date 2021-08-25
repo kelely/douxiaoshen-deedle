@@ -49,14 +49,16 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     
-    - name: Build
+    - name: Build & Tests & Pack
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
-        ./sonar/scanner/dotnet-sonarscanner begin /k:"kelely_douxiaoshen-deedle" /o:"kelely" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-        dotnet build --no-restore
+        ./sonar/scanner/dotnet-sonarscanner begin /k:"kelely_douxiaoshen-deedle" /o:"kelely" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./tests/Douxs.Deedle.Tests/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Tests*.cs"
+        dotnet build -c Release --no-restore
+        dotnet test .\tests\Douxs.Deedle.Tests\Douxs.Deedle.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+        dotnet pack -c Release --no-build
         ./sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
     
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+#     - name: Test
+#       run: dotnet test --no-build --verbosity normal
