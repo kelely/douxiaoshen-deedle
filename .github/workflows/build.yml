@@ -60,5 +60,10 @@ jobs:
         dotnet pack -c Release --no-build
         ./sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
     
+    - name: Publish
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+        PROJECT_FILE_PATH: ./src/Douxs.Deedle/Douxs.Deedle.csproj
+        NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
 #     - name: Test
 #       run: dotnet test --no-build --verbosity normal
