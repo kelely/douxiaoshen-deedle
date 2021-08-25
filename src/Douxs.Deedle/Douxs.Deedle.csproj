@@ -3,6 +3,20 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <RootNamespace>Deedle</RootNamespace>
+
+        <Product>Douxs.Deedle</Product>
+        <AssemblyTitle>Douxs.Deedle</AssemblyTitle>
+        <AssemblyName>Douxs.Deedle</AssemblyName>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+
+        <PackageId>Douxs.Deedle</PackageId>
+        <PackageVersion>1.0.0</PackageVersion>
+        <PackageProjectUrl>https://github.com/kelely/douxiaoshen-deedle</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/kelely/douxiaoshen-deedle/blob/master/LICENSE</PackageLicenseUrl>
+
+        <Description>Douxs.Deedle</Description>
+
+        <Authors>兜小神</Authors>
     </PropertyGroup>
 
     <ItemGroup>
